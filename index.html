@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000000; /* Black background */
+      color: #ffffff; /* White text */
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #2d2d2d; /* Dark gray for navigation */
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #9c27b0; /* Purple links */
+      margin: 0 25px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ba68c8; /* Lighter purple on hover */
+    }
+
+    /* Section Styles */
+    section {
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #1a1a1a; /* Darker section background */
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #9c27b0; /* Purple for headings */
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Project Card Styling */
+    .project {
+      background-color: #333; /* Dark gray card */
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-title {
+      font-size: 1.6rem;
+      color: #9c27b0; /* Purple for project titles */
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #bbb;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    ul li {
+      background: #333;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2d2d2d; /* Dark footer background */
+      color: #bbb;
+      font-size: 1rem;
+    }
+
+    /* Video Styling */
+    .programming-video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .programming-video:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('skills')">Skills</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <div class="container">
+      <h1>Hi, I'm Aeriz Pasion</h1>
+      <p>An aspiring IT professional eager to learn and grow in the tech world. I am passionate about problem-solving, technology, and building solutions that make an impact.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a first-year IT student at the University of the Cordilleras. My goal is to become proficient in software development and web technologies, learning how to solve real-world problems through code. I enjoy challenges and love collaborating with others to create innovative solutions.</p>
+      <p>Currently, I'm focusing on mastering front-end technologies, understanding the principles of UX/UI design, and learning how to build responsive web applications.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3 class="project-title">Project 1: Basic Calculator</h3>
+        <p class="project-description">A simple calculator built using HTML, CSS, and JavaScript. It can perform basic arithmetic operations like addition, subtraction, multiplication, and division. This project helped me understand DOM manipulation and basic JavaScript logic.</p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Project 2: Personal Portfolio Website</h3>
+        <p class="project-description">A personal website to showcase my skills, projects, and interests. Built with HTML, CSS, and a touch of JavaScript. This website is a work in progress, and I continue to update it as I learn more technologies and improve my skills.</p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Project 3: To-Do List Web App</h3>
+        <p class="project-description">A to-do list app that allows users to add, edit, and delete tasks. It is built using HTML, CSS, and JavaScript. This project reinforced my knowledge of arrays, local storage, and user interface design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <p>I am constantly learning and growing as a developer. Some of the skills I am currently working on include:</p>
+      <ul>
+        <li>HTML, CSS, and JavaScript</li>
+        <li>Responsive Web Design</li>
+        <li>Git and GitHub</li>
+        <li>Problem-Solving and Debugging</li>
+        <li>Basic UX/UI Design Principles</li>
+        <li>Collaboration and Teamwork</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2024 Aeriz Pasion. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to show the selected section and hide others
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the clicked section
+      const activeSection = document.getElementById(sectionId);
+      activeSection.classList.add('active');
+    }
+  </script>
+</body>
+</html>
