@@ -6,157 +6,203 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Global Styles */
+    /* General Styling */
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #000000; /* Black background */
-      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+      background-color: #2f2f2f; /* Dark grey background */
+      color: #ffffff;
       margin: 0;
       padding: 0;
     }
 
+    /* Navigation Menu */
     nav {
       display: flex;
       justify-content: center;
-      background-color: #2d2d2d; /* Dark gray for navigation */
-      padding: 15px 0;
+      background-color: #5c4d7d; /* Purple */
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
-      color: #9c27b0; /* Purple links */
-      margin: 0 25px;
+      color: #ffffff;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ba68c8; /* Lighter purple on hover */
+      color: #d1b3ff; /* Light purple */
     }
 
-    /* Section Styles */
-    section {
-      display: none;
-      padding: 50px 20px;
+    /* Home Section */
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #5c4d7d; /* Purple background */
+      padding: 60px 20px;
+    }
+
+    #home .container {
+      display: flex;
+      align-items: center;
+    }
+
+    #home img {
+      width: 300px;
+      height: auto;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+
+    #home h1 {
+      color: #ffffff;
+      font-size: 3rem;
+    }
+
+    /* About Section */
+    #about {
+      padding: 60px 20px;
+      background-color: #2f2f2f; /* Grey background */
       text-align: center;
-      background-color: #1a1a1a; /* Darker section background */
-      transition: opacity 0.5s ease;
-      opacity: 0;
     }
 
-    section.active {
-      display: block;
-      opacity: 1;
+    #about h2 {
+      color: #d1b3ff; /* Light purple */
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1, h2 {
-      font-size: 2.5rem;
-      color: #9c27b0; /* Purple for headings */
-    }
-
-    h3 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-
-    p {
+    #about p {
+      color: #ffffff;
       font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
     }
 
-    /* Project Card Styling */
-    .project {
-      background-color: #333; /* Dark gray card */
-      border-radius: 8px;
-      padding: 20px;
-      margin: 10px 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .project-title {
-      font-size: 1.6rem;
-      color: #9c27b0; /* Purple for project titles */
-    }
-
-    .project-description {
-      font-size: 1.1rem;
-      margin-top: 10px;
-      color: #bbb;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      font-size: 1.1rem;
-    }
-
-    ul li {
-      background: #333;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    footer {
+    /* Projects Section */
+    #projects {
+      padding: 60px 20px;
       text-align: center;
-      padding: 20px 0;
-      background-color: #2d2d2d; /* Dark footer background */
-      color: #bbb;
-      font-size: 1rem;
+      background-color: #2f2f2f; /* Purple background */
     }
 
-    /* Video Styling */
-    .programming-video {
-      max-width: 100%;
+    h2 {
+      color: #d1b3ff; /* Light purple */
+    }
+
+    .project {
+      margin-bottom: 40px;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 500px;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
     }
 
-    .programming-video:hover {
-      transform: scale(1.05);
+    .project a {
+      color: #d1b3ff; /* Light purple */
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .project a:hover {
+      color: #ffffff;
+    }
+
+    /* Skills Section */
+    #skills {
+      background-color: #2f2f2f; /* Grey background */
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #skills h2 {
+      color: #d1b3ff; /* Light purple */
+    }
+
+    #skills ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #skills li {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: #5c4d7d; /* Purple background */
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      color: #d1b3ff; /* Light purple */
+    }
+
+    #contact a {
+      color: #d1b3ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    #contact a:hover {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #5c4d7d; /* Purple background */
+      text-align: center;
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
   <!-- Navigation Menu -->
   <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('about')">About</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="active">
+  <section id="home">
     <div class="container">
-      <h1>Hi, I'm Aeriz Pasion</h1>
-      <p>An aspiring IT professional eager to learn and grow in the tech world. I am passionate about problem-solving, technology, and building solutions that make an impact.</p>
+      <img src="homeimg.jpg" alt="Your Picture">
+      <div>
+        <h1>Hi, I'm Aeriz Pasion</h1>
+        <p>An aspiring IT professional eager to learn and grow in the tech world.</p>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a first-year IT student at the University of the Cordilleras. My goal is to become proficient in software development and web technologies, learning how to solve real-world problems through code. I enjoy challenges and love collaborating with others to create innovative solutions.</p>
-      <p>Currently, I'm focusing on mastering front-end technologies, understanding the principles of UX/UI design, and learning how to build responsive web applications.</p>
+  <h2>About Me</h2>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <!-- First Video (Square and Larger) -->
+    <video width="300" height="300" controls style="margin-right: 20px;">
+      <source src="SLSP.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Second Picture (Square and Larger, Non-compressed) -->
+    <div style="width: 300px; height: 300px; overflow: hidden; margin-left: 20px;">
+      <img src="SLSPI.jpg" alt="Aeriz Pasion" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-  </section>
+  </div>
+
+  <p style="text-align: center;">I am a first-year IT student at the University of the Cordilleras. I am passionate about software development, web technologies, and problem-solving through technology. My current focus is building foundational skills in programming and web development. I am also a Basketball Varsity and a graduate of Saint Louis School of Pacdal with a strand Science, Technology, Engineering, and Mathematics.</p>
+</section>
+
+
 
   <!-- Projects Section -->
   <section id="projects">
@@ -164,37 +210,56 @@
       <h2>Projects</h2>
 
       <div class="project">
-        <h3 class="project-title">Project 1: Basic Calculator</h3>
-        <p class="project-description">A simple calculator built using HTML, CSS, and JavaScript. It can perform basic arithmetic operations like addition, subtraction, multiplication, and division. This project helped me understand DOM manipulation and basic JavaScript logic.</p>
+        <h3 class="project-title">
+          <a href="https://levitroii123.wixsite.com/dhee-khalt-stem" target="_blank">STEM Project Showcase</a>
+        </h3>
+        <img src="dheekalt.jpg" alt="STEM Project Image">
+        <p class="project-description">Showcasing STEM-related activities and accomplishments.</p>
       </div>
 
       <div class="project">
-        <h3 class="project-title">Project 2: Personal Portfolio Website</h3>
-        <p class="project-description">A personal website to showcase my skills, projects, and interests. Built with HTML, CSS, and a touch of JavaScript. This website is a work in progress, and I continue to update it as I learn more technologies and improve my skills.</p>
-      </div>
-
-      <div class="project">
-        <h3 class="project-title">Project 3: To-Do List Web App</h3>
-        <p class="project-description">A to-do list app that allows users to add, edit, and delete tasks. It is built using HTML, CSS, and JavaScript. This project reinforced my knowledge of arrays, local storage, and user interface design.</p>
+        <h3 class="project-title">
+          <a href="https://joshwie-6.webnode.page/" target="_blank">Web Development Project</a>
+        </h3>
+        <img src="aeriz1.jpg" alt="Web Development Project Image">
+        <p class="project-description">Highlighting various creative works and technical skills.</p>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <p>I am constantly learning and growing as a developer. Some of the skills I am currently working on include:</p>
-      <ul>
-        <li>HTML, CSS, and JavaScript</li>
-        <li>Responsive Web Design</li>
-        <li>Git and GitHub</li>
-        <li>Problem-Solving and Debugging</li>
-        <li>Basic UX/UI Design Principles</li>
-        <li>Collaboration and Teamwork</li>
-      </ul>
-    </div>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Problem Solving</li>
+      <li>Team Collaboration</li>
+      <li>Web Development</li>
+      <li>Database Management</li>
+    </ul>
   </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+  <h2>Contact</h2>
+  <p>Feel free to reach out to me through the following links:</p>
+  
+  <!-- Facebook Profile -->
+  <a href="https://www.facebook.com/aerizpasionn" target="_blank">
+    <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-1/405209216_1360686731476010_6083063954658006991_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WjERiyZFk0wQ7kNvgH_tfAy&_nc_zt=24&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=A9-54-q3sU1dGZpWQEaZHzi&oh=00_AYAbJFuBM-eZrF8QdYlqb9axOQfBlRcoQEBmNz7LEvOoAw&oe=675742B5" alt="Facebook Profile" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+    Facebook
+  </a>
+  
+  <!-- Email Link -->
+  <a href="mailto:pasionaeriz@gmail.com">Email</a>
+  
+  <!-- Instagram Profile -->
+  <a href="https://www.instagram.com/pasionaeriz/" target="_blank">
+    <img src="https://instagram.fmnl3-4.fna.fbcdn.net/v/t51.2885-19/466077687_517870424559613_2772137573222345746_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=instagram.fmnl3-4.fna.fbcdn.net&_nc_cat=101&_nc_ohc=yT8I2n5wJzQQ7kNvgGAkAQB&_nc_gid=9c3a52575f844da8bb3f0980c422f8b6&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYAXRb0tt7BRImjXL7DaBh6jm3I_Ks_-EVYAXYcec0Nalw&oe=6757645F&_nc_sid=7a9f4b" alt="Instagram Profile" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 10px;">
+    Instagram
+  </a>
+</section>
+
 
   <!-- Footer -->
   <footer>
@@ -203,18 +268,5 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Function to show the selected section and hide others
-    function showSection(sectionId) {
-      // Hide all sections
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => section.classList.remove('active'));
-
-      // Show the clicked section
-      const activeSection = document.getElementById(sectionId);
-      activeSection.classList.add('active');
-    }
-  </script>
 </body>
 </html>
